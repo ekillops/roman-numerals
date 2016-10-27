@@ -1,6 +1,18 @@
 var digitConverter = function(number) {
-  var onesNumerals = {one:"I", five:"V", ten:"X"}; // = numeralList
-  return onesNumerals.one.repeat(number);
+  var numeralList = {one:"I", five:"V", ten:"X"}; // = numeralList
+  var one = numeralList.one;
+  var five = numeralList.five;
+  var ten = numeralList.ten;
+
+    if (number <= 3) {
+      return (number * one);
+    } else if (number === 4) {
+      return (one + five);
+    } else if (number >= 5 && number < 9) {
+      return (five + (one.repeat(number - 5)));
+    } else if (number === 9) {
+      return (one + ten);
+    }
 };
 
 
