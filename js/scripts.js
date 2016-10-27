@@ -1,12 +1,25 @@
+var digitConverter = function(number) {
+  var onesNumerals = {one:"I", five:"V", ten:"X"}; // = numeralList
+  return onesNumerals.one.repeat(number);
+};
+
+
+
+
+
+
+
+
+
 $(document).ready(function(){
 
 
-  $("#convertButton").submit(function(event){
-    event.preventDefault();
-    var userNumber = $("#numberInput").val();
+  $("#convertButton").click(function(event){
+    console.log("test");
+    var userNumber = parseInt($("#numberInput").val());
 
 
-    var result = [];
+    var result = digitConverter(userNumber);
     $("#numeralResult").text(result);
   });
 
