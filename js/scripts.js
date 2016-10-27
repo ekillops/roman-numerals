@@ -13,7 +13,7 @@ var digitConverter = function(number) {
     } else if (number === 9) {
       return (one + ten);
     }
-};
+}; 
 
 
 
